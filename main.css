@@ -1,0 +1,38 @@
+/* LEGACY SNIPPETS */
+/* May not work with the latest version of Discord */
+
+.membersWrap-2h-GB4 {
+  min-height: 100%
+}
+
+@media (max-width: 1400px) {
+  .layers-3iHuyZ > .layer-3QrUeG:nth-child(2) {
+    --height2: 100%;
+    --width2: 100%;
+  }
+}
+
+.buttons-3JBrkn :not(:last-child) {
+  display:none
+}
+
+.attachedBars-tZDmyV {
+    margin: 0 50px;
+}
+
+/* Remove loading splash screen */
+.container-16j22k {
+    background-color: unset;
+}
+.content-1-zrf2 {
+	display: none;
+}
+
+/* Keep the "X" icon clickable when using the horizontal image layout */
+.removeAttachmentButton-2qVPxg {
+   z-index: 10;
+}
+
+.wrapper-2qzCYF.fullScreen-1tMzXY, .wrapper-2qzCYF.noChat-18KtBD {
+    background-color: var(--background-tertiary);
+}
