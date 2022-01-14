@@ -1,3 +1,55 @@
+/* Removes the annoying "Wave to [user]" CTA button from join messages */
+[class*='welcomeCTA'] {
+  display: none;
+}
+
+/* Keep the settings sidebar a sensible size */
+[aria-label="USER_SETTINGS"] [class*="sidebarRegion"] {
+  flex-grow: 0;
+}
+
+/* Chenge the name of some items on the settings sidebar to represent what they're actually used for */
+[data-item-id="theme-toggler"] {
+  font-size: 0;
+  height: 32px;
+}
+[data-item-id="theme-toggler"]::before {
+  content: "Themes";
+  font-size: 16px;
+}
+[data-item-id="pc-moduleManager-themes"] {
+  font-size: 0;
+  height: 32px;
+}
+[data-item-id="pc-moduleManager-themes"]::before {
+  content: "Quick CSS";
+  font-size: 16px;
+}
+
+/* Get the Members List to fill all the vertical space, to avoid the background being different below it	 when there are few members */
+[class*=membersWrap] {
+  min-height: 100%
+}
+
+/* (Mostly) fix Powercord's Download Plugin button being weird */
+.PluginDownloaderApply:not(.applied) {
+    color: var(--text-normal);
+}
+
+/* Keep the Settings layer filling the screen at small window sizes */
+/* (Could be improved further by using a responsive scale */
+@media (max-width: 1350px) {
+  [class*="layers"] [aria-label="USER_SETTINGS"] {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+/* Fix incorrectly-coloured hovered buttons */
+[class*="lookFilled"][class*="colorBrand"]:hover {
+    background-color: var(--dracula-accent-light);
+}
+
 /* LEGACY SNIPPETS */
 /* May not work with the latest version of Discord */
 
@@ -35,4 +87,8 @@
 
 .wrapper-2qzCYF.fullScreen-1tMzXY, .wrapper-2qzCYF.noChat-18KtBD {
     background-color: var(--background-tertiary);
+}
+
+.wrapper-28eC3z svg {
+    overflow: hidden;
 }
