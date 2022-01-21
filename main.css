@@ -3,6 +3,22 @@
   display: none;
 }
 
+/* Stop sticker spam from being so annoying (doesn't work in Compact Mode) */
+[class*='clickableSticker']::before {
+    content: "Sent a sticker";
+    color: white;
+    opacity: .5;
+    font-style: italic;
+}
+[class*='clickableSticker'] > div {
+    display: none;
+}
+
+/* Make transparent images actually transparent */
+[id*="message-accessories-"] > div > a {
+  background-color: unset;
+}
+
 /* Keep the settings sidebar a sensible size */
 [aria-label="USER_SETTINGS"] [class*="sidebarRegion"] {
   flex-grow: 0;
