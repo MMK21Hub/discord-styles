@@ -1,30 +1,30 @@
-/* Removes the annoying "Wave to [user]" CTA button from join messages */
-[class*='welcomeCTA'] {
+/* Opinionated: Removes the annoying "Wave to [user]" CTA button from join messages */
+[class*="welcomeCTA"] {
   display: none;
 }
 
-/* Stop sticker spam from being so annoying (doesn't work in Compact Mode) */
-[class*='clickableSticker']::before {
-    content: "Sent a sticker";
-    color: white;
-    opacity: .5;
+/* Opinionated: Stop sticker spam from being so annoying (doesn't work that well in Compact Mode) */
+[class*="clickableSticker"] > div::before {
+    content: attr(aria-label);
+    color: hsl(204deg 16% 65%);
     font-style: italic;
 }
-[class*='clickableSticker'] > div {
+[class*="clickableSticker"] > div > div,
+[class*="stickersList-2DytTV"] {
     display: none;
 }
 
-/* Make transparent images actually transparent */
+/* Fix: Make transparent images actually transparent */
 [id*="message-accessories-"] > div > a {
   background-color: unset;
 }
 
-/* Keep the settings sidebar a sensible size */
+/* Fix: Keep the settings sidebar a sensible size */
 [aria-label="USER_SETTINGS"] [class*="sidebarRegion"] {
   flex-grow: 0;
 }
 
-/* Chenge the name of some items on the settings sidebar to represent what they're actually used for */
+/* Opinionated: Change the name of some items on the settings sidebar to represent what they're actually used for */
 [data-item-id="theme-toggler"] {
   font-size: 0;
   height: 32px;
@@ -42,12 +42,12 @@
   font-size: 16px;
 }
 
-/* Get the Members List to fill all the vertical space, to avoid the background being different below it	 when there are few members */
+/* Fix: Get the Members List to fill all the vertical space, to avoid the background being different below it when there are few members */
 [class*=membersWrap] {
   min-height: 100%
 }
 
-/* (Mostly) fix Powercord's Download Plugin button being weird */
+/* Fix: (Mostly) stops Powercord's 'Download Plugin' button being weird */
 .PluginDownloaderApply:not(.applied) {
     color: var(--text-normal);
 }
@@ -61,9 +61,15 @@
   }
 }
 
-/* Fix incorrectly-coloured hovered buttons */
+/* Fix: Adjust the colour of hovered buttons [FIXED UPSTREAM] */
 [class*="lookFilled"][class*="colorBrand"]:hover {
     background-color: var(--dracula-accent-light);
+}
+
+/* Opinionated: De-emphasize some parts of the My Account user profile card */
+[class*="fieldList"] [class*="colorHeaderPrimary"],
+[class*="userTag"] {
+  color: var(--header-secondary)
 }
 
 /* LEGACY SNIPPETS */
