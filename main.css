@@ -4,8 +4,8 @@
 }
 
 /* Opinionated: Stop sticker spam from being so annoying (doesn't work that well in Compact Mode) */
-[class*="clickableSticker"] > div::before {
-    content: attr(aria-label);
+[class*='clickableSticker'] > div::before {
+    content: "[Sticker] " attr(aria-label);
     color: hsl(204deg 16% 65%);
     font-style: italic;
 }
