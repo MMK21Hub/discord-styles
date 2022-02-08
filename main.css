@@ -72,6 +72,18 @@
   color: var(--header-secondary)
 }
 
+/* Opinionated: Remove the Boost Progress Bar because it's just overused at this point */
+/*[class*="sidebar"] [class*="content"] > [class*="container-"] {*/
+[aria-label*="Buy Boosts to help unlock"] {
+  display: none;
+}
+/*[class*="sidebar"] [class*="content"] > div:nth-child(2) {
+  display: none;
+}
+[class*="sidebar"] [class*="content"] > div[style] + div:not([style]) {
+  margin-top: 16px;
+}*/
+
 /* LEGACY SNIPPETS */
 /* May not work with the latest version of Discord */
 
