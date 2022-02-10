@@ -47,7 +47,7 @@
   min-height: 100%
 }
 
-/* Fix: (Mostly) stops Powercord's 'Download Plugin' button being weird */
+/* Fix: (Mostly) stops Powercord's 'Download Plugin' button being weird [FIXED UPSTREAM] */
 .PluginDownloaderApply:not(.applied) {
     color: var(--text-normal);
 }
