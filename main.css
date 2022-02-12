@@ -72,6 +72,14 @@
   color: var(--header-secondary)
 }
 
+/* Opinionated: De-emphasize promotional title text (see: Bot Discovery page) */
+[class*=heroPrimaryText] {
+  color: white !important
+}
+[class*=heroSecondaryText] {
+  color: lightgrey !important
+}
+
 /* Opinionated: Remove the Boost Progress Bar because it's just overused at this point */
 /*[class*="sidebar"] [class*="content"] > [class*="container-"] {*/
 [aria-label*="Buy Boosts to help unlock"] {
