@@ -103,6 +103,11 @@
     background: var(--background-primary);
 }
 
+/* Fix: Use the Dracula Primary background colour in the Bot Discovery screen */
+.theme-dark [class*=directoryModal] {
+  background: var(--background-primary)
+}
+
 /* Fix: There's a gradient that Discord has after the channel topic. This rule fixes its colour. */
 .theme-dark .headerBarInner-3MqiOv:after {
    background: linear-gradient(90deg,rgba(54,57,63,0) 0,var(--background-primary))
