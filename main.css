@@ -86,7 +86,7 @@
 
 /* Fix: Use the Dracula theme background everywhere */
 /* '.theme-dark' is to keep specificity the same as Discord's selector */
-.theme-dark .background-1JKyRc {
+.theme-dark [class*=".background-"] {
     background: var(--background-primary);
 }
 
