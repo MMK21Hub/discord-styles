@@ -80,6 +80,11 @@
   color: lightgrey !important
 }
 
+/* Fix: Make the Discord logo on the Bot Discovery screen match the Dracula accent colour */
+[class*=directoryModal] [class*=logo] {
+  color: var(--dracula-accent)
+}
+
 /* Opinionated: Remove the Boost Progress Bar because it's just overused at this point */
 /*[class*="sidebar"] [class*="content"] > [class*="container-"] {*/
 [aria-label*="Buy Boosts to help unlock"] {
