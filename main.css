@@ -84,6 +84,17 @@
   margin-top: 16px;
 }*/
 
+/* Fix: Use the Dracula theme background everywhere */
+/* '.theme-dark' is to keep specificity the same as Discord's selector */
+.theme-dark .background-1JKyRc {
+    background: var(--background-primary);
+}
+
+/* Fix: There's a gradient that Discord has after the channel topic. This rule fixes its colour. */
+.theme-dark .headerBarInner-3MqiOv:after {
+   background: linear-gradient(90deg,rgba(54,57,63,0) 0,var(--background-primary))
+}
+
 /* LEGACY SNIPPETS */
 /* May not work with the latest version of Discord */
 
