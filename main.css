@@ -4,7 +4,7 @@
 }
 
 /* Opinionated: Stop sticker spam from being so annoying (doesn't work that well in Compact Mode) */
-[class*='clickableSticker'] > div::before {
+[class*="clickableSticker"] > div::before {
     content: "[Sticker] " attr(aria-label);
     color: hsl(204deg 16% 65%);
     font-style: italic;
@@ -99,7 +99,7 @@
 
 /* Fix: Use the Dracula theme background everywhere */
 /* '.theme-dark' is to keep specificity the same as Discord's selector */
-.theme-dark [class*=".background-"] {
+.theme-dark [class*="background-"] {
     background: var(--background-primary);
 }
 
