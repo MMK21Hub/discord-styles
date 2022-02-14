@@ -113,7 +113,7 @@
 }
 
 /* Fix: There's a gradient that Discord has after the channel topic. This rule fixes its colour. */
-.theme-dark .headerBarInner-3MqiOv:after {
+.theme-dark [class*=headerBarInner]:after {
    background: linear-gradient(90deg,rgba(54,57,63,0) 0,var(--background-primary))
 }
 
