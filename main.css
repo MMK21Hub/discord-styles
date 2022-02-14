@@ -121,7 +121,7 @@
 [class*=homeContainer] [class*=channelsContainer] {
   background: var(--background-secondary)
 }
-.theme-dark [class*=chat] [class*=title] {
+.theme-dark [class*=chat] > section[class*=title] {
     background-color: var(--background-primary);
 }
 
