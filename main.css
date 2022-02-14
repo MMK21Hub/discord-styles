@@ -117,6 +117,14 @@
    background: linear-gradient(90deg,rgba(54,57,63,0) 0,var(--background-primary))
 }
 
+/* Fix: Dracula theming for the upcoming Server Home Page */
+[class*=homeContainer] [class*=channelsContainer] {
+  background: var(--background-secondary)
+}
+.theme-dark [class*=chat] [class*=title] {
+    background-color: var(--background-primary);
+}
+
 /* LEGACY SNIPPETS */
 /* May not work with the latest version of Discord */
 
