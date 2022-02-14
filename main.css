@@ -99,9 +99,13 @@
 
 /* Fix: Use the Dracula theme background everywhere */
 /* '.theme-dark' is to keep specificity the same as Discord's selector */
-.theme-dark [class*="background-"] {
-    background: var(--background-primary);
+.theme-dark :not([class*=accountProfileCard]) > [class*="background-"] {
+    background-color: var(--background-primary);
 }
+.theme-dark [class*="background-"][class*="container-"] {
+    background-color: var(--background-secondary);
+}
+
 
 /* Fix: Use the Dracula Primary background colour in the Bot Discovery screen */
 .theme-dark [class*=directoryModal] {
