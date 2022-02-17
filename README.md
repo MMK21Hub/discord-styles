@@ -1,5 +1,9 @@
 # Discord Styles
 
+> **I no longer use Powercord.** PowerCord seems to have a bug that causes Discord to crash on startup. This means that I am no longer able to use my Custom CSS, so this repository will no longer be updated.
+
+## Old README
+
 Here are some CSS tweaks that I've made to Discord using Powercord's Quick CSS feature. Feel free to use some/all of the snippets!
 
 Note that I'm using the [Dracua theme](https://github.com/x6r/dracula), so some snippets might only be relevent to that theme.
