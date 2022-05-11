@@ -24,52 +24,34 @@
   flex-grow: 0;
 }
 
+/* Fix: Make the "Cum Zone" settings page title consistent with the others */
+#ysink_zone_cumzone-tab h1 {
+    font-size: 20px;
+    line-height: 24px;
+}
+
 /* Opinionated: Change the name of some items on the settings sidebar to represent what they're actually used for */
-[data-item-id="theme-toggler"] {
+[aria-controls="ysink_zone_cumzone-tab"] {
   font-size: 0;
   height: 32px;
 }
-[data-item-id="theme-toggler"]::before {
-  content: "Themes";
+[aria-controls="ysink_zone_cumzone-tab"]::before {
+  content: "Plugin Store";
   font-size: 16px;
 }
-[data-item-id="pc-moduleManager-themes"] {
+#ysink_zone_cumzone-tab h1 {
   font-size: 0;
-  height: 32px;
+  height: 24px;
 }
-[data-item-id="pc-moduleManager-themes"]::before {
-  content: "Quick CSS";
+#ysink_zone_cumzone-tab h1::before {
+  content: "Plugin Store";
   font-size: 16px;
+  font-size: 20px;
 }
 
 /* Fix: Get the Members List to fill all the vertical space, to avoid the background being different below it when there are few members */
 [class*=membersWrap] {
   min-height: 100%
-}
-
-/* Fix: (Mostly) stops Powercord's 'Download Plugin' button being weird [FIXED UPSTREAM] */
-.PluginDownloaderApply:not(.applied) {
-    color: var(--text-normal);
-}
-
-/* Keep the Settings layer filling the screen at small window sizes */
-/* (Could be improved further by using a responsive scale */
-@media (max-width: 1350px) {
-  [class*="layers"] [aria-label="USER_SETTINGS"] {
-    width: 100% !important;
-    height: 100% !important;
-  }
-}
-
-/* Fix: Adjust the colour of hovered buttons [FIXED UPSTREAM] */
-[class*="lookFilled"][class*="colorBrand"]:hover {
-    background-color: var(--dracula-accent-light);
-}
-
-/* Opinionated: De-emphasize some parts of the My Account user profile card */
-[class*="fieldList"] [class*="colorHeaderPrimary"],
-[class*="userTag"] {
-  color: var(--header-secondary)
 }
 
 /* Opinionated: De-emphasize promotional title text (see: Bot Discovery page) */
@@ -78,11 +60,6 @@
 }
 [class*=heroSecondaryText] {
   color: lightgrey !important
-}
-
-/* Fix: Make the Discord logo on the Bot Discovery screen match the Dracula accent colour */
-[class*=directoryModal] [class*=logo] {
-  color: var(--dracula-accent)
 }
 
 /* Opinionated: Remove the Boost Progress Bar because it's just overused at this point */
@@ -96,34 +73,6 @@
 [class*="sidebar"] [class*="content"] > div[style] + div:not([style]) {
   margin-top: 16px;
 }*/
-
-/* Fix: Use the Dracula theme background everywhere */
-/* '.theme-dark' is to keep specificity the same as Discord's selector */
-.theme-dark :not([class*=accountProfileCard]) > [class*="background-"] {
-    background-color: var(--background-primary);
-}
-.theme-dark [class*="background-"][class*="container-"] {
-    background-color: var(--background-secondary);
-}
-
-
-/* Fix: Use the Dracula Primary background colour in the Bot Discovery screen */
-.theme-dark [class*=directoryModal] {
-  background: var(--background-primary)
-}
-
-/* Fix: There's a gradient that Discord has after the channel topic. This rule fixes its colour. */
-.theme-dark [class*=headerBarInner]:after {
-   background: linear-gradient(90deg,rgba(54,57,63,0) 0,var(--background-primary))
-}
-
-/* Fix: Dracula theming for the upcoming Server Home Page */
-[class*=homeContainer] [class*=channelsContainer] {
-  background: var(--background-secondary)
-}
-.theme-dark [class*=chat] > section[class*=title] {
-    background-color: var(--background-primary);
-}
 
 /* LEGACY SNIPPETS */
 /* May not work with the latest version of Discord */
