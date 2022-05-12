@@ -67,6 +67,9 @@
 [aria-label*="Buy Boosts to help unlock"] {
   display: none;
 }
+ul[aria-label="Channels"] div[aria-hidden="true"][style] + div[style] {
+  display: none;
+}
 /*[class*="sidebar"] [class*="content"] > div:nth-child(2) {
   display: none;
 }
